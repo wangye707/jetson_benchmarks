@@ -17,7 +17,7 @@ def main():
 
     # System Check
     system_check = utilities(jetson_devkit=args.jetson_devkit, gpu_freq=args.gpu_freq, dla_freq=args.dla_freq)
-    system_check.close_all_apps()
+    #system_check.close_all_apps()
     if system_check.check_trt():
         sys.exit()
     system_check.set_power_mode(args.power_mode, args.jetson_devkit)
